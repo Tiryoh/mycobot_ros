@@ -11,8 +11,9 @@ Unless attributed otherwise, everything in this repository is licensed under the
 
 ### Acknowledgements
 
-* [elephantrobotics/myCobot](https://github.com/elephantrobotics/myCobot)
-    * [Apache-2.0](https://github.com/elephantrobotics/myCobot/blob/524ed7643a6d86663f7783b49bacf7cf7bbd0105/LICENSE)
+* [elephantrobotics/myCobotROS](https://github.com/elephantrobotics/myCobotROS)
+    * `Copyright (c) 2020, Elephant Robotics`
+    * [BSD-2-Clause](https://github.com/elephantrobotics/myCobotROS/blob/cc9c7151b60709c445e1d2bdf500b9fbad91f841/LICENSE)
 
 #### License Notice for Apache License, Version 2.0 Derivative Works
 
