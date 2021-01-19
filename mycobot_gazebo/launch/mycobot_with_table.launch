@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Definitions of arguments that you can pass this launch file, for example paused:=true -->
+  <arg name="paused" default="false" />
+  <arg name="use_sim_time" default="true" />
+  <arg name="gui" default="true" />
+  <arg name="headless" default="false" />
+  <arg name="debug" default="false" />
+  <arg name="x0" default="0" />
+  <arg name="y0" default="0" />
+  <arg name="z0" default="1.02" />
+
+  <!-- Load the Gazebo simulator with specified world file -->
+  <include file="$(find mycobot_gazebo)/launch/mycobot_with_emptyworld.launch">
+    <arg name="world_name" value="$(find mycobot_gazebo)/worlds/table.world" />
+    <arg name="debug" value="$(arg debug)" />
+    <arg name="gui" value="$(arg gui)" />
+    <arg name="paused" value="$(arg paused)" />
+    <arg name="use_sim_time" value="$(arg use_sim_time)" />
+    <arg name="headless" value="$(arg headless)" />
+    <arg name="x0" value="$(arg x0)" />
+    <arg name="y0" value="$(arg y0)" />
+    <arg name="z0" value="$(arg z0)" />
+  </include>
+</launch>

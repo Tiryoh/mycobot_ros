@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>mycobot_gazebo</name>
+  <version>0.0.0</version>
+  <description>The mycobot_gazebo package</description>
+
+  <maintainer email="tiryoh@gmail.com">Daisuke Sato</maintainer>
+  <author email="tiryoh@gmail.com">Daisuke Sato</author>
+
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>gazebo_ros_control</exec_depend>
+  <exec_depend>joint_state_publisher</exec_depend>
+  <exec_depend>mycobot_description</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+</package>
