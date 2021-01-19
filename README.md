@@ -14,6 +14,9 @@ Unless attributed otherwise, everything in this repository is licensed under the
 * [elephantrobotics/myCobotROS](https://github.com/elephantrobotics/myCobotROS)
     * `Copyright (c) 2020, Elephant Robotics`
     * [BSD-2-Clause](https://github.com/elephantrobotics/myCobotROS/blob/cc9c7151b60709c445e1d2bdf500b9fbad91f841/LICENSE)
+* [rt-net/jnmouse_sim](https://github.com/rt-net/jnmouse_sim)
+    * `(C) 2020 RT Corporation <support@rt-net.jp>`
+    * [Apache-2.0](https://github.com/rt-net/jnmouse_sim/blob/5b3eac2071e7feb7e9ffd6f054cdfef9081e9166/LICENSE)
 
 #### License Notice for Apache License, Version 2.0 Derivative Works
 
