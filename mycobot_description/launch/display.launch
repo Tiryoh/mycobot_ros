@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- arguments -->
+  <arg name="model" default="$(find mycobot_description)/urdf/mycobot.urdf.xacro" />
+  <arg name="gui" default="true" />
+  <arg name="state_rate" default="10" />
+  <arg name="xacro_option" default="" />
+  <arg name="robot_namespace" default="" />
+  <arg name="rvizconfig" default="$(find mycobot_description)/launch/config/urdf.rviz" />
+  <!-- prameters -->
+  <param name="rate" value="$(arg state_rate)" />
+  <!-- Load the URDF into the ROS Parameter Server -->
+  <param name="robot_description" command="$(find xacro)/xacro '$(arg model)' gazebo_plugin:=true
+            robot_namespace:='$(arg robot_namespace)'
+            $(arg xacro_option)" />
+  <rosparam param="source_list">["joint_states_source"]</rosparam>
+  <!-- nodes -->
+  <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" if="$(arg gui)" />
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" unless="$(arg gui)" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+  <!-- rviz -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+</launch>

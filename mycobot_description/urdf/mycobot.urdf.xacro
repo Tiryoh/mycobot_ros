@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<robot name="mycobot"
+       xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+       xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+       xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
+       xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:arg name="gazebo_plugin" default="true" />
+  <xacro:arg name="robot_namespace" default="" />
+  <xacro:arg name="virtual_base_link" default="false" />
+
+  <xacro:include filename="$(find mycobot_description)/urdf/mycobot.xacro" />
+
+  <!-- Used for fixing robot to Gazebo 'base_link' -->
+  <link name="world" />
+
+  <joint name="base_link_to_world_joint" type="fixed">
+    <parent link="world" />
+    <child link="base_link" />
+  </joint>
+
+  <!-- Link to provide the location reference for the arm -->
+  <xacro:if value="$(arg virtual_base_link)">
+    <link name="base_link" />
+    <xacro:property name="mycobot_origin" value="0 0 0" />
+  </xacro:if>
+
+  <xacro:unless value="$(arg virtual_base_link)">
+    <link name="base_link">
+      <visual>
+        <geometry>
+          <mesh filename="package://mycobot_description/meshes/stl/visual/base_link.stl" scale="0.001 0.001 0.001" />
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 ${M_PI}" />
+        <material name="white" />
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://mycobot_description/meshes/stl/visual/base_link.stl" scale="0.001 0.001 0.001" />
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 ${M_PI}" />
+      </collision>
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <mass value="1.0" />
+        <xacro:cylinder_inertia m="0.01" r="0.05" h="0.001" />
+      </inertial>
+    </link>
+
+    <xacro:property name="mycobot_origin" value="0 0 0.006" />
+  </xacro:unless>
+
+  <xacro:mycobot_robot prefix="" parent="base_link">
+    <origin xyz="${mycobot_origin}" rpy="0 0 ${M_PI/2}" />
+  </xacro:mycobot_robot>
+
+  <!-- <xacro:if value="$(arg gazebo_plugin)"> -->
+    <gazebo>
+      <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+        <robotNamespace>$(arg robot_namespace)</robotNamespace>
+        <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+        <legacyModeNS>false</legacyModeNS>
+      </plugin>
+    </gazebo>
+  <!-- </xacro:if> -->
+
+  <mycobot />
+</robot>
