@@ -2,7 +2,12 @@
 
 unofficial myCobot ROS Package
 
-official repository: https://github.com/elephantrobotics/myCobot
+[![Image from Gyazo](https://i.gyazo.com/cb39b38ddfa678c58c538460fbaac1ef.jpg)](https://tiryoh.hateblo.jp/entry/2021/01/07/233848)
+
+* official repositories
+    * https://github.com/elephantrobotics/myCobot
+    * https://github.com/elephantrobotics/myCobotROS
+    * https://github.com/elephantrobotics/pymycobot
 
 ## License
 
