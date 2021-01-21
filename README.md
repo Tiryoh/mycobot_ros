@@ -22,6 +22,9 @@ Unless attributed otherwise, everything in this repository is licensed under the
 * [rt-net/jnmouse_sim](https://github.com/rt-net/jnmouse_sim)
     * `(C) 2020 RT Corporation <support@rt-net.jp>`
     * [Apache-2.0](https://github.com/rt-net/jnmouse_sim/blob/5b3eac2071e7feb7e9ffd6f054cdfef9081e9166/LICENSE)
+* [ros-planning/moveit](https://github.com/ros-planning/moveit)
+    * `Copyright (c) 2008-2013, Willow Garage, Inc.`
+    * [BSD-3-Clause](https://github.com/ros-planning/moveit/blob/664ae01803abf5e0b4649063102357262de9e05c/LICENSE.txt)
 
 #### License Notice for Apache License, Version 2.0 Derivative Works
 
