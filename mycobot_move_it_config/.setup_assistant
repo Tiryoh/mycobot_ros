@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: mycobot_description
+    relative_path: urdf/mycobot.urdf.xacro
+    xacro_args: gazebo_plugin:=true
+  SRDF:
+    relative_path: config/mycobot.srdf
+  CONFIG:
+    author_name: Daisuke Sato
+    author_email: tiryoh@gmail.com
+    generated_timestamp: 1611165386
