@@ -32,7 +32,7 @@ rosdep install -r -y -i --from-paths .
 
 ```
 catkin build
-source devel/setup.bash
+catkin source # or "source ~/catkin_ws/devel/setup.bash"
 ```
 
 ## Usage
@@ -70,6 +70,12 @@ Unless attributed otherwise, everything in this repository is licensed under the
 * [ros-planning/moveit](https://github.com/ros-planning/moveit)
     * `Copyright (c) 2008-2013, Willow Garage, Inc.`
     * [BSD-3-Clause](https://github.com/ros-planning/moveit/blob/664ae01803abf5e0b4649063102357262de9e05c/LICENSE.txt)
+* [nisshan-x/mycobot_moveit](https://github.com/nisshan-x/mycobot_moveit)
+    * `Copyright (c) 2021 Shinya Nishimoto`
+    * [MIT](https://github.com/nisshan-x/mycobot_moveit/blob/f7403f6caadf5ac7b5a3dd755eea6874825f16f5/LICENSE)
+* [mertcookimg/mycobot_controller](https://github.com/mertcookimg/mycobot_controller)
+    * `Copyright (c) 2021 mert`
+    * [MIT](https://github.com/mertcookimg/mycobot_controller/blob/bb8e32e3a9ba7803cfb35f79b7af8df5ab33940a/LICENSE)
 
 #### License Notice for Apache License, Version 2.0 Derivative Works
 
