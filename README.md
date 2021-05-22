@@ -17,22 +17,22 @@ unofficial myCobot ROS Package
 
 ### 1. Download this repository
 
-```
+```sh
 cd ~/catkin_ws/src
 git clone https://github.com/Tiryoh/mycobot_ros.git
 ```
 
 ### 2. Install the dependencies
 
-```
+```sh
 rosdep install -r -y -i --from-paths .
 ```
 
 ### 3. Build the package
 
-```
+```sh
 catkin build
-source devel/setup.bash
+catkin source # or "source ~/catkin_ws/devel/setup.bash"
 ```
 
 ## Usage
