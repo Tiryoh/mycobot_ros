@@ -32,7 +32,8 @@
     <link name="${mycobot_link_1}">
       <visual>
         <geometry>
-          <mesh filename="package://mycobot_description/meshes/stl/visual/link1.stl" />
+          <mesh filename="package://mycobot_description/meshes/dae/link1.dae" />
+          <!-- <mesh filename="package://mycobot_description/meshes/stl/visual/link1.stl" /> -->
         </geometry>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <material name="white" />
@@ -54,7 +55,8 @@
     <link name="${mycobot_link_2}">
       <visual>
         <geometry>
-          <mesh filename="package://mycobot_description/meshes/stl/visual/link2.stl" />
+          <mesh filename="package://mycobot_description/meshes/dae/link2.dae" />
+          <!-- <mesh filename="package://mycobot_description/meshes/stl/visual/link2.stl" /> -->
         </geometry>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <material name="white" />
@@ -76,7 +78,8 @@
     <link name="${mycobot_link_3}">
       <visual>
         <geometry>
-          <mesh filename="package://mycobot_description/meshes/stl/visual/link3.stl" />
+          <mesh filename="package://mycobot_description/meshes/dae/link3.dae" />
+          <!-- <mesh filename="package://mycobot_description/meshes/stl/visual/link3.stl" /> -->
         </geometry>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <material name="white" />
@@ -98,7 +101,8 @@
     <link name="${mycobot_link_4}">
       <visual>
         <geometry>
-          <mesh filename="package://mycobot_description/meshes/stl/visual/link4.stl" />
+          <mesh filename="package://mycobot_description/meshes/dae/link4.dae" />
+          <!-- <mesh filename="package://mycobot_description/meshes/stl/visual/link4.stl" /> -->
         </geometry>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <material name="white" />
@@ -120,7 +124,8 @@
     <link name="${mycobot_link_5}">
       <visual>
         <geometry>
-          <mesh filename="package://mycobot_description/meshes/stl/visual/link5.stl" />
+          <mesh filename="package://mycobot_description/meshes/dae/link5.dae" />
+          <!-- <mesh filename="package://mycobot_description/meshes/stl/visual/link5.stl" /> -->
         </geometry>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <material name="white" />
@@ -130,7 +135,7 @@
           <mesh filename="package://mycobot_description/meshes/stl/collision/link5.stl" />
           <!-- <mesh filename="package://mycobot_description/meshes/stl/visual/link5.stl" /> -->
         </geometry>
-        <origin xyz="0 0 0" rpy="0 0 0" />
+        <origin xyz="0.004 0 0" rpy="0 0 0" />
       </collision>
       <inertial>
         <origin xyz="0 0 0.05" rpy="0 0 0" />
@@ -142,7 +147,8 @@
     <link name="${mycobot_link_6}">
       <visual>
         <geometry>
-          <mesh filename="package://mycobot_description/meshes/stl/visual/link6.stl" />
+          <mesh filename="package://mycobot_description/meshes/dae/link6.dae" />
+          <!-- <mesh filename="package://mycobot_description/meshes/stl/visual/link6.stl" /> -->
         </geometry>
         <origin xyz="0 0 0 " rpy="0 0 0" />
         <material name="white" />
@@ -164,19 +170,20 @@
     <link name="${mycobot_link_7}">
       <visual>
         <geometry>
-          <cylinder length="0.005" radius="0.02" />
+          <!-- <cylinder length="0.005" radius="0.02" /> -->
+          <mesh filename="package://mycobot_description/meshes/dae/link7.dae" />
         </geometry>
         <origin xyz="0 0.0025 0" rpy="${M_PI/2} 0 0" />
         <material name="white" />
       </visual>
       <collision>
         <geometry>
-          <cylinder length="0.005" radius="0.02" />
+          <cylinder length="0.013" radius="0.02" />
         </geometry>
-        <origin xyz="0 0.0025 0" rpy="${M_PI/2} 0 0" />
+        <origin xyz="0 -0.004 0" rpy="${M_PI/2} 0 0" />
       </collision>
       <inertial>
-        <origin xyz="0 0.0025 0" rpy="${M_PI/2} 0 0" />
+        <origin xyz="0 -0.004 0" rpy="${M_PI/2} 0 0" />
         <mass value="0.1" />
         <xacro:cylinder_inertia m="0.1" r="0.02" h="0.005" />
       </inertial>
@@ -205,7 +212,7 @@
       <limit effort="10.0" lower="-${M_PI}" upper="${M_PI}" velocity="${joint_velocity_limit}" />
       <parent link="${mycobot_link_3}" />
       <child link="${mycobot_link_4}" />
-      <origin xyz=" 0.00272 0 0.1104" rpy="0 0 0" />
+      <origin xyz="0 0 0.1104" rpy="0 0 0" />
       <dynamics damping="1.0e-6" friction="2.0e-1" />
     </joint>
 
@@ -223,7 +230,7 @@
       <limit effort="10.0" lower="-${M_PI}" upper="${M_PI}" velocity="${joint_velocity_limit}" />
       <parent link="${mycobot_link_5}" />
       <child link="${mycobot_link_6}" />
-      <origin xyz="0.0298 0 0.02876" rpy="0 0 0" />
+      <origin xyz="0.034 0 0.035" rpy="0 0 0" />
       <dynamics damping="1.0e-6" friction="2.0e-1" />
     </joint>
 
