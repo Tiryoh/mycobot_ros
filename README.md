@@ -35,6 +35,12 @@ catkin build
 catkin source # or "source ~/catkin_ws/devel/setup.bash"
 ```
 
+Execute `download_gazebo_models.sh` to download the Gazebo models manually.
+
+```sh
+rosrun mycobot_gazebo download_gazebo_models.sh
+```
+
 ## Usage
 ### Quick Launch
 
