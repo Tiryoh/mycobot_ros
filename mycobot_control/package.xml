@@ -12,4 +12,5 @@
   <depend>controller_manager</depend>
   <depend>joint_state_controller</depend>
   <depend>joint_trajectory_controller</depend>
+  <depend>position_controllers</depend>
 </package>
